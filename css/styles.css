@@ -25,6 +25,11 @@ html, body {
     -moz-osx-font-smoothing: antialiased;
 }
 
+body {
+    background-color: #F7F9FA;
+}
+
+
 img {
     height: auto;
     max-width: 100%;
@@ -1163,4 +1168,22 @@ a:hover, p a:hover {
 
 .img-shadow img, img.img-shadow, .img-shadow > img {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* ==========================================================================
+ # Layout
+========================================================================== */
+
+.main-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    background-color: #fff;
+}
+
+.release-note-footer {
+    min-height: 350px;
+    padding: 96px 0px 32px;
+    background-color: #27274f;
 }
