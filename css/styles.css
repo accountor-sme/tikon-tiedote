@@ -1,0 +1,1166 @@
+/* ==========================================================================
+ # Normalize
+========================================================================== */
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Fabrik Regular";
+    src: url("../font/fabrik/Fabrik-Regular.woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Fabrik Bold";
+    src: url("../font/fabrik/Fabrik-Bold.woff");
+    font-weight: normal;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+button:focus {
+    outline: inherit;
+}
+
+/* ==========================================================================
+ # Typography
+========================================================================== */
+
+html {
+    font-family: "Fabrik Regular", sans-serif;
+    color: #27274f;
+}
+
+/* Titles
+----------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fabrik Bold", sans-serif;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0px 0px 24px 0px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 32px 0px 24px 0px;
+}
+
+h3 {
+    font-size: 27px;
+    line-height: 32px;
+    margin: 32px 0px 16px 0px;
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 32px;
+    margin: 0px 0px 16px 0px;
+}
+
+@media only screen and (min-width: 688px) {
+
+    h1 {
+		font-size: 40px;
+		line-height: 48px;
+	}
+    
+	h2 {
+		font-size: 36px;
+		line-height: 40px;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+
+	h1 {
+        font-size: 49px;
+        line-height: 64px;
+        letter-spacing: -1px;
+    }
+    
+    h2 {
+        font-size: 39px;
+        line-height: 48px;
+    }
+    
+    h3 {
+        font-size: 31px;
+        line-height: 32px;
+    }
+}
+
+/* Paragraphs
+----------------------------------------------- */
+
+p {
+    color: #605b80;
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0px 0px 16px 0px;
+}
+
+p.big {
+    font-size: 24px;
+}
+
+p.small, .hero .has-small-font-size {
+    font-size: 16px;
+}
+
+/* lower opacity on hero images */
+
+.wp-block-cover p, .blog-hero-left-content p, .academy-record-text-content p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 688px) {
+
+    .wp-block-cover p, .blog-hero-left-content p, .academy-record-text-content p {
+        font-size: 24px;
+        opacity: 0.8;
+    }
+}
+
+/* Lists
+----------------------------------------------- */
+
+li {
+    color: #605b80;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.entry-content ul li {
+    margin-bottom: 8px;
+}
+
+/* Buttons
+----------------------------------------------- */
+
+.entry-content .wp-block-buttons .wp-block-button {
+    margin: 0px 24px 0px 0px;
+}
+
+.entry-content .wp-block-buttons .wp-block-button:last-child {
+    margin: 0px;
+}
+
+.cta-primary, .wp-block-button__link {
+    background-color: #F75759;
+    border-radius: 0!important;
+    border: 0;
+    color: #fff;
+    font-family: "Fabrik Bold", sans-serif;
+    font-size: 16px;
+    min-height: 48px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding: 8px 24px 8px 24px;
+    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+	-moz-text-decoration-line: none;
+    text-transform: uppercase;
+    margin: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cta-primary:hover, .wp-block-button__link:hover {
+    background-color: #D9393B;
+    color: #fff;
+}
+
+a.cta-secondary, .cta-secondary {
+    background-color: transparent;
+    color: #F75759;
+    border: 2px solid inherit;
+    color: #fff;
+    font-family: "Fabrik Bold", sans-serif;
+    font-size: 16px;
+    min-height: 48px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding: 8px 24px 8px 24px;
+    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+	-moz-text-decoration-line: none;
+    text-transform: uppercase;
+    margin: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+a.cta-secondary:hover, .cta-secondary:hover {
+    opacity: 0.7;
+}
+
+a.cta-ghost, .cta-ghost {
+    background-color: transparent;
+    color: #F75759;
+    border: 2px solid inherit;
+    color: #fff;
+    font-family: "Fabrik Bold", sans-serif;
+    font-size: 16px;
+    min-height: 48px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    padding: 8px 24px 8px 24px;
+    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+	-moz-text-decoration-line: none;
+    text-transform: uppercase;
+    margin: 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+a.cta-ghost:hover, .cta-ghost:hover {
+    color: #fff;
+    background-color: #D9393B;
+    border: 2px solid #D9393B;
+}
+
+
+/* Links
+----------------------------------------------- */
+
+a, p a {
+    color: #F75759;
+    text-decoration-line: underline;
+}
+
+a:hover, p a:hover {
+    color: #D9393B;
+}
+
+/* ==========================================================================
+ # Layout
+========================================================================== */
+
+/* (row) Horizontal spaces */
+
+.xxs-space {
+    height: 8px!important;
+}
+
+.xs-space {
+    height: 16px!important;
+}
+
+.s-space {
+    height: 24px!important;
+}
+
+.m-space {
+    height: 32px!important;
+}
+
+.l-space {
+    height: 48px!important;
+}
+
+.xl-space {
+    height: 64px!important;
+}
+
+.xxl-space {
+    height: 96px!important;
+}
+
+.xxxl-space {
+    height: 128px!important;
+}
+
+.xxxxl-space {
+    height: 192px!important;
+}
+
+/* Responsive space for between section */
+
+.section-space, .section-space-l, .section-space-xl {
+    height: 64px!important;
+}
+
+@media screen and (min-width: 1312px) {
+
+.section-space {
+    height: 96px!important;
+} 
+
+.section-space-l {
+    height: 128px!important;
+}
+
+.section-space-xl {
+    height: 192px!important;
+}
+
+}
+
+/* Vertical spaces (Use this when adding gutenberg group-block) */
+
+.is-root-container .add-padding, .entry-content .add-padding, .add-padding {
+    padding: 0px 16px;
+}
+
+@media screen and (min-width: 520px) {
+    .is-root-container .add-padding, .entry-content .add-padding, .add-padding{
+        padding: 0px 16px;
+    }
+}
+
+/* These classes can be used if is necessary to get padding or margin to 0 */
+
+.pt-0 {
+    padding-top: 0px!important;
+}
+.pr-0 {
+    padding-right: 0px!important;
+}
+.pb-0 {
+    padding-bottom: 0px!important;
+}
+.pl-0 {
+    padding-left: 0px!important;
+}
+.mt-0 {
+    margin-top: 0px!important;
+}
+.mr-0 {
+    margin-right: 0px!important;
+}
+.mb-0 {
+    margin-bottom: 0px!important;
+}
+.ml-0 {
+    margin-left: 0px!important;
+}
+
+
+/* S-columns */
+@media screen and (min-width: 520px) {
+    .s-pt-0 {
+        padding-top: 0px!important;
+    }
+    .s-pr-0 {
+        padding-right: 0px!important;
+    }
+    .s-pb-0 {
+        padding-bottom: 0px!important;
+    }
+    .s-pl-0 {
+        padding-left: 0px!important;
+    }
+    .s-mt-0 {
+        margin-top: 0px!important;
+    }
+    .s-mr-0 {
+        margin-right: 0px!important;
+    }
+    .s-mb-0 {
+        margin-bottom: 0px!important;
+    }
+    .s-ml-0 {
+        margin-left: 0px!important;
+    }
+}
+
+/* M */
+@media screen and (min-width: 688px) {
+    .m-pt-0 {
+        padding-top: 0px!important;
+    }
+    .m-pr-0 {
+        padding-right: 0px!important;
+    }
+    .m-pb-0 {
+        padding-bottom: 0px!important;
+    }
+    .m-pl-0 {
+        padding-left: 0px!important;
+    }
+    .m-mt-0 {
+        margin-top: 0px!important;
+    }
+    .m-mr-0 {
+        margin-right: 0px!important;
+    }
+    .m-mb-0 {
+        margin-bottom: 0px!important;
+    }
+    .m-ml-0 {
+        margin-left: 0px!important;
+    }
+}
+
+/* L */
+@media only screen and (min-width: 992px) {
+    .l-pt-0 {
+        padding-top: 0px!important;
+    }
+    .l-pr-0 {
+        padding-right: 0px!important;
+    }
+    .l-pb-0 {
+        padding-bottom: 0px!important;
+    }
+    .l-pl-0 {
+        padding-left: 0px!important;
+    }
+    .l-mt-0 {
+        margin-top: 0px!important;
+    }
+    .l-mr-0 {
+        margin-right: 0px!important;
+    }
+    .l-mb-0 {
+        margin-bottom: 0px!important;
+    }
+    .l-ml-0 {
+        margin-left: 0px!important;
+    }
+}
+/* XL */
+@media screen and (min-width: 1312px) {
+    .xl-pt-0 {
+        padding-top: 0px!important;
+    }
+    .xl-pr-0 {
+        padding-right: 0px!important;
+    }
+    .xl-pb-0 {
+        padding-bottom: 0px!important;
+    }
+    .xl-pl-0 {
+        padding-left: 0px!important;
+    }
+    .xl-mt-0 {
+        margin-top: 0px!important;
+    }
+    .xl-mr-0 {
+        margin-right: 0px!important;
+    }
+    .xl-mb-0 {
+        margin-bottom: 0px!important;
+    }
+    .xl-ml-0 {
+        margin-left: 0px!important;
+    }
+
+}
+
+/* Different width classes for faster page building */
+
+ .area-50 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 50px;
+ }
+ 
+ .area-100 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 100px;
+ }
+ 
+ .area-150 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 150px;
+ }
+ 
+ .area-200 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 200px;
+ }
+ 
+ .area-250 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 250px;
+ }
+ 
+ .area-300 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 300px;
+ }
+ 
+ .area-350 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 350px;
+ }
+ 
+ .area-400 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 400px;
+ }
+ 
+ .area-450 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 450px;
+ }
+ 
+ .area-500 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 500px;
+ }
+ 
+ .area-550 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 550px;
+ }
+ 
+ .area-600 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 600px;
+ }
+ 
+ .area-650 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 650px;
+ }
+ 
+ .area-700 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 700px;
+ }
+ 
+ .area-750 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 750px;
+ }
+ .area-800 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 800px;
+ }
+ 
+ .area-850 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 850px;
+ }
+ 
+ .area-900 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 900px;
+ }
+ 
+ .area-950 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 950px;
+ }
+ 
+ .area-1000 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1000px;
+ }
+ 
+ .area-1050 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1050px;
+ }
+ 
+ .area-1100 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1100px;
+ }
+ 
+ .area-1150 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1150px;
+ }
+ 
+ .area-1200 {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1200px;
+ }
+ 
+ .area-max {
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1288px;
+ }
+
+/* Different text-align classes (mostly for pages where cant use wordpress / gutenberg editor ) */
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+/* S-columns */
+@media screen and (min-width: 520px) {
+
+    .text-left-s {
+        text-align: left;
+    }
+    .text-center-s {
+        text-align: center;
+    }
+    .text-right-s {
+        text-align: right;
+    }
+
+}
+
+/* M */
+@media screen and (min-width: 688px) {
+
+    .text-left-m {
+        text-align: left;
+    }
+    .text-center-m {
+        text-align: center;
+    }
+    .text-right-m {
+        text-align: right;
+    }
+
+}
+
+/* L */
+@media only screen and (min-width: 992px) {
+  
+    .text-left-l {
+        text-align: left;
+    }
+    .text-center-l {
+        text-align: center;
+    }
+    .text-right-l {
+        text-align: right;
+    }
+
+}
+
+/* XL */
+@media screen and (min-width: 1312px) {
+  
+    .text-left-xl {
+        text-align: left;
+    }
+    .text-center-xl {
+        text-align: center;
+    }
+    .text-right-xl {
+        text-align: right;
+    }
+
+}
+ 
+/* Flexbox-system for positioning */
+
+/* If need to display flex items inline, use this */
+.flex-direction-row {
+    flex-direction: row!important;
+}
+
+.top-left, .top-center, .top-right, .center-left, .center-center, .center-right, .bottom-left, .bottom-center, .bottom-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-left {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.top-center {
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-right {
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.center-left {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.center-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.center-right {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.bottom-left {
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.bottom-center {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bottom-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.flex-end {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* CSS Grid Layout */
+.grid-row {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 40px 0px;
+}
+
+@media screen and (min-width: 520px) {
+    .grid-row {
+        grid-gap: 40px 40px;
+    }
+}
+
+.equal-height {
+    height: 100%;
+}
+
+.full-screen-height {
+    min-height: 100vh;
+}
+
+/* Need to modify */
+.no-col-gap {
+    grid-gap: 40px 0px;
+}
+
+/* Need to modify */
+.no-row-gap {
+    grid-gap: 40px 0px;
+}
+
+.no-gap {
+    grid-gap: 0px 0px!important;
+}
+
+.grid-s-1, .grid-m-1, .grid-l-1, .grid-xl-1, .grid-s-2, .grid-m-2, .grid-l-2, .grid-xl-2, .grid-s-3, .grid-m-3, .grid-l-3, .grid-xl-3, .grid-s-4, .grid-m-4, .grid-l-4, .grid-xl-4, .grid-s-5, .grid-m-5, .grid-l-5, .grid-xl-5, .grid-s-6, .grid-m-6, .grid-l-6, .grid-xl-6, .grid-s-7, .grid-m-7, .grid-l-7, .grid-xl-7, .grid-s-8, .grid-m-8, .grid-l-8, .grid-xl-8, .grid-s-9, .grid-m-9, .grid-l-9, .grid-xl-9, .grid-s-10, .grid-m-10, .grid-l-10, .grid-xl-10, .grid-s-11, .grid-m-11, .grid-l-11, .grid-xl-11, .grid-s-12, .grid-m-12, .grid-l-12, .grid-xl-12 {
+    grid-column: span 12;
+    position: relative;
+    margin: 0px!important;
+}
+
+/* S-columns */
+
+@media screen and (min-width: 520px) {
+
+    .grid-s-12 {
+        grid-column: span 12;
+    }
+
+    .grid-s-11 {
+        grid-column: span 11;
+    }
+
+    .grid-s-10 {
+        grid-column: span 10;
+    }
+
+    .grid-s-9 {
+        grid-column: span 9;
+    }
+
+    .grid-s-8 {
+        grid-column: span 8;
+    }
+
+    .grid-s-7 {
+        grid-column: span 7;
+    }
+
+    .grid-s-6 {
+        grid-column: span 6;
+    }
+
+    .grid-s-5 {
+        grid-column: span 5;
+    }
+
+    .grid-s-4 {
+        grid-column: span 4;
+    }
+
+    .grid-s-3 {
+        grid-column: span 3;
+    }
+
+    .grid-s-2 {
+        grid-column: span 2;
+    }
+
+    .grid-s-1 {
+        grid-column: span 1;
+    }
+}
+
+/* M-columns */
+
+@media screen and (min-width: 688px) {
+
+   .grid-m-12 {
+        grid-column: span 12;
+    }
+
+   .grid-m-11 {
+        grid-column: span 11;
+    }
+
+    .grid-m-10 {
+        grid-column: span 10;
+    }
+
+   .grid-m-9 {
+        grid-column: span 9;
+    }
+
+   .grid-m-8 {
+        grid-column: span 8;
+    }
+
+   .grid-m-7 {
+        grid-column: span 7;
+    }
+
+   .grid-m-6 {
+        grid-column: span 6;
+    }
+
+   .grid-m-5 {
+        grid-column: span 5;
+    }
+
+   .grid-m-4 {
+        grid-column: span 4;
+    }
+
+   .grid-m-3 {
+        grid-column: span 3;
+    }
+
+   .grid-m-2 {
+        grid-column: span 2;
+    }
+
+    .grid-m-1 {
+        grid-column: span 1;
+    }
+}
+
+/* L-columns */
+
+@media only screen and (min-width: 992px) {
+
+    .grid-l-12 {
+        grid-column: span 12;
+    }
+
+    .grid-l-11 {
+        grid-column: span 11;
+    }
+
+    .grid-l-10 {
+        grid-column: span 10;
+    }
+
+   .grid-l-9 {
+        grid-column: span 9;
+    }
+
+    .grid-l-8 {
+        grid-column: span 8;
+    }
+
+    .grid-l-7 {
+        grid-column: span 7;
+    }
+
+    .grid-l-6 {
+        grid-column: span 6;
+    }
+
+    .grid-l-5 {
+        grid-column: span 5;
+    }
+
+    .grid-l-4 {
+        grid-column: span 4;
+    }
+
+   .grid-l-3 {
+        grid-column: span 3;
+    }
+
+    .grid-l-2 {
+        grid-column: span 2;
+    }
+
+   .grid-l-1 {
+        grid-column: span 1;
+    }
+}
+
+/* XL-columns */
+
+@media screen and (min-width: 1312px) {
+
+    .grid-xl-12 {
+        grid-column: span 12;
+    }
+
+    .grid-xl-11 {
+        grid-column: span 11;
+    }
+
+    .grid-xl-10 {
+        grid-column: span 10;
+    }
+
+    .grid-xl-9 {
+        grid-column: span 9;
+    }
+
+    .grid-xl-8 {
+        grid-column: span 8;
+    }
+
+    .grid-xl-7 {
+        grid-column: span 7;
+    }
+
+    .grid-xl-6 {
+        grid-column: span 6;
+    }
+
+    .grid-xl-5 {
+        grid-column: span 5;
+    }
+
+    .grid-xl-4 {
+        grid-column: span 4;
+    }
+    
+    .grid-xl-3 {
+        grid-column: span 3;
+    }
+
+    .grid-xl-2 {
+        grid-column: span 2;
+    }
+    
+    .grid-xl-1 {
+        grid-column: span 1;
+    }
+}
+
+/* End of CSS Grid Layout */
+
+/* Hide and show in different screen sizes */
+
+/* Hide or show as default */
+
+.hide-default {
+    display: none;
+}
+.show-default {
+    display: block;
+}
+
+/* S-columns */
+@media screen and (min-width: 520px) {
+    .hide-s {
+        display: none;
+    }
+    .show-s {
+        display: block;
+    }
+}
+
+/* M */
+@media screen and (min-width: 688px) {
+    .hide-m {
+        display: none;
+    }
+    .show-m {
+        display: block;
+    }
+}
+
+/* L */
+@media only screen and (min-width: 992px) {
+    .hide-l {
+        display: none;
+    }
+    .show-l {
+        display: block;
+    }
+}
+/* XL */
+@media screen and (min-width: 1312px) {
+    .hide-xl {
+        display: none;
+    }
+    .show-xl {
+        display: block;
+    }
+
+}
+
+/* Different orders for columns */
+
+/* Default */
+
+.order-1 {
+    order: 1;
+}
+.order-2 {
+    order: 2;
+}
+
+/* S-columns */
+@media screen and (min-width: 520px) {
+
+    .order-s-1 {
+        order: 1;
+    }
+    .order-s-2 {
+        order: 2;
+    }
+}
+
+/* M */
+@media screen and (min-width: 688px) {
+
+    .order-m-1 {
+        order: 1;
+    }
+    .order-m-2 {
+        order: 2;
+    }
+}
+
+/* L */
+@media only screen and (min-width: 992px) {
+
+    .order-l-1 {
+        order: 1;
+    }
+    .order-l-2 {
+        order: 2;
+    }
+}
+
+/* XL */
+@media screen and (min-width: 1312px) {
+  
+    .order-xl-1 {
+        order: 1;
+    }
+    .order-xl-2 {
+        order: 2;
+    }
+}
+
+
+/* Background layer for custom places */
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(90deg,rgb(39,39,79) 100%,rgba(155,82,224,0) 98%);
+    opacity: 0.8;
+}
+
+@media only screen and (min-width: 992px) {
+    .background-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background: linear-gradient(90deg,rgb(39,39,79) 59%,rgba(155,82,224,0) 98%);
+        opacity: 0.8;
+    }
+}
+
+/* Image bow-shadows */
+
+.img-shadow img, img.img-shadow, .img-shadow > img {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
