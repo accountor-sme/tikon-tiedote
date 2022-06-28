@@ -1184,11 +1184,88 @@ a:hover, p a:hover {
 
 .hero-section {
     background: linear-gradient(225deg, #e9dbff, #D0C2E6);
-    min-height: 350px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+
+.product-box {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    min-height: 180px;
+    height: 100%;
+}
+
+.link-spanner {
+    border-radius: 8px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(80.38deg, rgba(39,39,79,0.8) 1.74%, rgba(66,66,113,0.8) 92.24%);
+}
+
+.product-name {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.5px;
+    height: 100%;
+    text-decoration-line: none;
+    -webkit-text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+
+.product-name:hover {
+    color: #fff;
+}
+
+.product-description {
+    text-transform: none;
+    margin-top: 8px;
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #BFBBD8 !important;
+}
+
+.bottom-tip {
+    flex-direction: column;
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: #27274f;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+
+.inner-bottom-tip {
+    padding: 2px 5px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    background: #e9dbff;
 }
 
 .release-note-footer {
